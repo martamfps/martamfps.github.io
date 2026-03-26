@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TODO: substitua o link canônico pelo seu domínio -->
+<link rel="canonical" href="https://martamfps.dev">
+<title>Marta Francisca Pego dos Santos — Dados & Tecnologia</title>
+<meta name="description" content="Portfólio de Marta Francisca Pego dos Santos — profissional em transição para tecnologia e dados, com foco em SQL, Python, Business Intelligence e análise de dados.">
+<!-- Open Graph -->
+<meta property="og:title" content="Marta Francisca Pego dos Santos — Dados & Tecnologia">
+<meta property="og:description" content="Portfólio profissional: SQL, Python, Power BI, Business Intelligence.">
+<meta property="og:type" content="website">
+<!-- TODO: substitua pela URL real da imagem OG -->
+<meta property="og:image" content="https://martamfps.dev/profile.png">
+<meta property="og:url" content="https://martamfps.dev">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marta Francisca Pego dos Santos — Dados & Tecnologia">
+<meta name="twitter:description" content="SQL · Python · Power BI · Business Intelligence">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Marta Francisca Pego dos Santos",
+      "jobTitle": "Analista de Dados em Formação",
+      "email": "marta.mfps@gmail.com",
+      "url": "https://martamfps.dev",
+      "sameAs": [
+        "https://linkedin.com/in/marta-francisca-pego-dos-santos",
+        "https://github.com/martamfps"
+      ],
+      "address": { "@type": "PostalAddress", "addressLocality": "Blumenau", "addressRegion": "SC", "addressCountry": "BR" }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Portfólio — Marta Francisca",
+      "url": "https://martamfps.dev"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav role="navigation" aria-label="Menu principal">
+  <a href="#hero" class="nav-logo">marta.tech</a>
+  <ul class="nav-links" id="nav-links" role="list">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experiencia">Experiência</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#educacao">Educação</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div style="display:flex;gap:10px;align-items:center;">
+    <button id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+      <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero" aria-labelledby="hero-name">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge" aria-label="Disponível para oportunidades">Disponível para oportunidades</div>
+      <h1 id="hero-name">
+        Marta Pego<br>
+      </h1>
+      <p class="hero-subtitle">// Dados · SQL · Python · Business Intelligence</p>
+      <p class="hero-desc">
+        Profissional em transição estruturada para tecnologia e dados com mais de 10 anos transformando informação complexa em decisões claras. Atualmente em formação técnica e buscando minha primeira posição formal na área.
+      </p>
+      <div class="hero-ctas">
+        <a href="#" onclick="generateCurriculumPDF(event)" class="btn-primary" aria-label="Gerar e baixar currículo em PDF">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Baixar CV (PDF)
+        </a>
+        <a href="#contato" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Entre em contato
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-wrap" role="img" aria-label="Foto de perfil de Marta Francisca">
+        <div class="avatar-ring" aria-hidden="true"></div>
+        <div class="avatar-ring-inner" aria-hidden="true"></div>
+        <div class="avatar-skeleton" id="avatar-skeleton" aria-hidden="true"></div>
+        <picture>
+          <img
+            src="profile.png"
+            width="220"
+            height="220"
+            alt="Marta Francisca Pego dos Santos — Analista de Dados"
+            loading="lazy"
+            decoding="async"
+            class="avatar-img"
+            id="avatar-img"
+            style="opacity:0"
+            onerror="this.style.display='none'; document.getElementById('avatar-skeleton').style.animation='none'; document.getElementById('avatar-skeleton').style.background='var(--bg-card)'; document.getElementById('avatar-initials').style.display='flex';"
+            onload="this.style.opacity='1'; document.getElementById('avatar-skeleton').style.display='none';"
+          >
+        </picture>
+        <!-- Fallback initials if image not found -->
+        <div id="avatar-initials" style="display:none; position:absolute; inset:0; border-radius:50%; background:rgba(78,205,196,0.12); align-items:center; justify-content:center; font-family:var(--font-display); font-size:3rem; color:var(--accent); z-index:2;">MF</div>
+        <div class="avatar-dots" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" aria-labelledby="sobre-title">
+  <div class="section-inner">
+    <p class="section-label reveal">01 — sobre mim</p>
+    <h2 class="section-title reveal" id="sobre-title">Dados como linguagem,<br>clareza como resultado</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Passei mais de <strong>10 anos</strong> em ambientes que exigiam precisão, organização e comunicação clara de licitações com ERP a suporte técnico em universidade. Em cada papel, fui a pessoa que traduzia: o técnico para quem não entendia de sistema, e a demanda do usuário para quem precisava resolver.</p>
+        <p>Hoje estou em <strong>transição estruturada para tecnologia e dados</strong>, com formação técnica em andamento em SQL, Python, análise exploratória, Power BI e desenvolvimento de sistemas. Não começo do zero começo com experiência real em dados, processos e pessoas.</p>
+        <p>Moro em <strong>Blumenau, SC</strong>, aberta para oportunidades remotas ou híbridas na região.</p>
+      </div>
+      <div class="about-stats reveal" aria-label="Estatísticas profissionais">
+        <div class="stat-card">
+          <div class="stat-number" aria-label="10 anos">10+</div>
+          <div class="stat-label">Anos de experiência</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" aria-label="5 tecnologias">5+</div>
+          <div class="stat-label">Tecnologias em formação</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" aria-label="4 certificações">4</div>
+          <div class="stat-label">Certificações</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" aria-label="Disponível agora">✓</div>
+          <div class="stat-label">Disponível agora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" aria-labelledby="skills-title">
+  <div class="section-inner">
+    <p class="section-label reveal">02 — habilidades</p>
+    <h2 class="section-title reveal" id="skills-title">Stack técnico</h2>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Linguagens & Dados
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">SQL</span>
+          <span class="skill-tag highlight">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Análise Exploratória</span>
+          <span class="skill-tag">CTEs & JOINs</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Business Intelligence
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Power BI</span>
+          <span class="skill-tag">Dashboards</span>
+          <span class="skill-tag">Storytelling com Dados</span>
+          <span class="skill-tag">KPIs & Métricas</span>
+          <span class="skill-tag">Visualização</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          Ferramentas & Plataformas
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Excel Avançado</span>
+          <span class="skill-tag">Google Sheets</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Jupyter Notebook</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">ERP Sapiens</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Soft Skills & Processo
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Comunicação técnica</span>
+          <span class="skill-tag">Documentação</span>
+          <span class="skill-tag">Gestão de processos</span>
+          <span class="skill-tag">Organização sob pressão</span>
+          <span class="skill-tag">Colaboração multidisciplinar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIÊNCIA ============ -->
+<section id="experiencia" aria-labelledby="exp-title">
+  <div class="section-inner">
+    <p class="section-label reveal">03 — trajetória</p>
+    <h2 class="section-title reveal" id="exp-title">Experiência profissional</h2>
+    <div class="timeline" role="list">
+
+      <article class="timeline-item reveal" role="listitem">
+        <div class="timeline-period">Nov 2025 – Mar 2026</div>
+        <h3 class="timeline-title">Técnica de Audiovisual</h3>
+        <p class="timeline-company">FURB – Universidade de Blumenau · Blumenau, SC</p>
+        <ul class="timeline-bullets">
+          <li>Edição de conteúdo jornalístico e acadêmico com prazos definidos e padrão de qualidade institucional</li>
+          <li>Organização e controle de entregas para canais digitais garantindo rastreabilidade e consistência</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item reveal" role="listitem">
+        <div class="timeline-period">Abr 2024 – Set 2024</div>
+        <h3 class="timeline-title">Editora de Vídeo</h3>
+        <p class="timeline-company">Grupo ND (NDTV) · Blumenau, SC</p>
+        <ul class="timeline-bullets">
+          <li>Edição de reportagens factuais com alta demanda e senso de urgência ambiente de produção ao vivo</li>
+          <li>Gestão de múltiplas entregas simultâneas sob pressão de prazo, com zero falhas de publicação</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item reveal" role="listitem">
+        <div class="timeline-period">Nov 2019 – Abr 2024</div>
+        <h3 class="timeline-title">Técnica de Audiovisual</h3>
+        <p class="timeline-company">FURB – Universidade de Blumenau · Blumenau, SC</p>
+        <ul class="timeline-bullets">
+          <li>Suporte técnico a professores e alunos durante aulas práticas atendimento de demandas variadas com foco em resolução</li>
+          <li>Controle de empréstimo e manutenção de equipamentos gestão de patrimônio e disponibilidade operacional</li>
+          <li>Tradução de necessidades técnicas em soluções práticas para diferentes perfis de usuário</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item reveal" role="listitem">
+        <div class="timeline-period">Fev 2014 – Nov 2019</div>
+        <h3 class="timeline-title">Assistente de Licitação</h3>
+        <p class="timeline-company">Grupo Livrarias Curitiba · Curitiba, PR</p>
+        <ul class="timeline-bullets">
+          <li>Extração e análise de dados no Sapiens ERP para elaboração de orçamentos e controle de pregões em Excel</li>
+          <li>Gestão de contratos do início ao encerramento, com atenção a conformidade jurídica e prazos legais</li>
+          <li>Mediação entre órgãos públicos e áreas internas comunicação clara como diferencial operacional</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item reveal" role="listitem">
+        <div class="timeline-period">Abr 2013 – Fev 2014</div>
+        <h3 class="timeline-title">Auxiliar de RH – Recrutamento e Seleção</h3>
+        <p class="timeline-company">Grupo SIP – Gestão de Pessoas · Curitiba, PR</p>
+        <ul class="timeline-bullets">
+          <li>Triagem de currículos, controle das etapas do processo seletivo e agendamento de entrevistas com precisão e organização</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJETOS ============ -->
+<section id="projetos" aria-labelledby="proj-title">
+  <div class="section-inner">
+    <p class="section-label reveal">04 — portfólio</p>
+    <h2 class="section-title reveal" id="proj-title">Projetos</h2>
+    <div class="projects-controls reveal" role="group" aria-label="Filtros de projeto">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="sql">SQL</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="bi">BI</button>
+      <input type="search" id="search-projects" placeholder="Buscar projeto..." aria-label="Buscar projetos">
+    </div>
+    <div class="projects-grid" id="projects-grid" role="list">
+
+      <article class="project-card reveal" data-tags="sql python" role="listitem">
+        <div class="project-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3 class="project-title">Análise Exploratória com Python</h3>
+        <p class="project-desc">Exploração e limpeza de dataset público com Pandas e NumPy, identificação de padrões e geração de insights visuais.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Pandas</span>
+          <span class="project-tag">NumPy</span>
+          <span class="project-tag">Jupyter</span>
+        </div>
+        <div class="project-links">
+          <!-- TODO: substitua pelo link real do projeto -->
+          <a href="https://github.com/martamfps" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Código
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-tags="sql" role="listitem">
+        <div class="project-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3 class="project-title">Consultas SQL - Análise de Dados</h3>
+        <p class="project-desc">Conjunto de queries com JOINs complexos, CTEs e agregações para extrair insights de bases relacionais simulando ambiente corporativo.</p>
+        <div class="project-tags">
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">JOINs</span>
+          <span class="project-tag">CTEs</span>
+        </div>
+        <div class="project-links">
+          <!-- TODO: substitua pelo link real do projeto -->
+          <a href="https://github.com/martamfps" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Código
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-tags="bi python" role="listitem">
+        <div class="project-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 class="project-title">Dashboard de Storytelling</h3>
+        <p class="project-desc">Painel gerencial construído com Power BI focado em comunicar insights para stakeholders não-técnicos, com narrativa visual clara.</p>
+        <div class="project-tags">
+          <span class="project-tag">Power BI</span>
+          <span class="project-tag">Storytelling</span>
+          <span class="project-tag">Visualização</span>
+        </div>
+        <div class="project-links">
+          <!-- TODO: substitua pelo link real do projeto -->
+          <a href="https://github.com/martamfps" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Código
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCAÇÃO ============ -->
+<section id="educacao" aria-labelledby="edu-title">
+  <div class="section-inner">
+    <p class="section-label reveal">05 — formação</p>
+    <h2 class="section-title reveal" id="edu-title">Educação & Certificações</h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-period">Em andamento · Previsão Abr/2026</div>
+        <h3 class="edu-title">Bootcamp Elas+ Tech - Análise de Dados</h3>
+        <p class="edu-institution">Ada Tech</p>
+        <p class="edu-detail">Python · SQL · Excel para Dados · Visualização · Git · Storytelling com Dados</p>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-period">2024 – 2027 · Em andamento</div>
+        <h3 class="edu-title">Análise e Desenvolvimento de Sistemas</h3>
+        <p class="edu-institution">Senac EAD</p>
+        <p class="edu-detail">Banco de Dados · Estrutura de Dados · Algoritmos e Programação</p>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-period">Pré-inscrito</div>
+        <h3 class="edu-title">SCTEC - Trilha Análise de Dados</h3>
+        <p class="edu-institution">Gov. SC + Senai</p>
+        <p class="edu-detail">Business Intelligence · Data Analytics · Mentoria de Carreira</p>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-period">2015 – 2017</div>
+        <h3 class="edu-title">Técnica em Produção de Áudio e Vídeo</h3>
+        <p class="edu-institution">IFPR - Instituto Federal do Paraná</p>
+        <p class="edu-detail">Tecnologias da Comunicação Audiovisual</p>
+      </div>
+    </div>
+
+    <div class="certs-list" role="list" aria-label="Certificações">
+      <div class="cert-item reveal" role="listitem">
+        <span class="cert-dot" aria-hidden="true"></span>
+        Trilha Digital Coders 24 - Engenharia de Dados · Ada Tech (2024)
+      </div>
+      <div class="cert-item reveal" role="listitem">
+        <span class="cert-dot" aria-hidden="true"></span>
+        Introduction to Data Science · Cisco (2025)
+      </div>
+      <div class="cert-item reveal" role="listitem">
+        <span class="cert-dot" aria-hidden="true"></span>
+        Python Essentials 1 · Cisco (2024)
+      </div>
+      <div class="cert-item reveal" role="listitem">
+        <span class="cert-dot" aria-hidden="true"></span>
+        Introduction to Cybersecurity · Cisco
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section id="contato" aria-labelledby="contact-title">
+  <div class="section-inner">
+    <p class="section-label reveal">06 — contato</p>
+    <h2 class="section-title reveal" id="contact-title">Vamos conversar</h2>
+    <div class="contact-grid">
+      <div class="contact-text reveal">
+        <p>Estou em busca de oportunidades em dados e tecnologia - remoto, presencial ou híbrido na região de Blumenau. Se tiver uma vaga ou quiser bater um papo sobre projetos, pode mandar mensagem.</p>
+        <div class="contact-links" role="list">
+          <a href="mailto:marta.mfps@gmail.com" class="contact-link" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            marta.mfps@gmail.com
+          </a>
+          <!-- TODO: substitua pelo link real do LinkedIn -->
+          <a href="https://linkedin.com/in/marta-francisca-pego-dos-santos" class="contact-link" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            linkedin.com/in/marta-francisca-pego-dos-santos
+          </a>
+          <a href="https://github.com/martamfps" class="contact-link" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            github.com/martamfps
+          </a>
+          <a href="https://wa.me/5547933831127?text=Olá,%20Marta!%20Acessei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20com%20você.%20" class="contact-link" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp - (47) 93383-1127
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal" aria-label="Formulário de contato" onsubmit="handleForm(event)">
+        <div class="form-group">
+          <label class="form-label" for="name">Nome</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Seu nome" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">E-mail</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Mensagem</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Olá Marta, gostaria de..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="align-self:flex-start">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Enviar mensagem
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer role="contentinfo">
+  <span>© 2026 Marta Francisca Pego dos Santos · Blumenau, SC</span>
+  <span style="color:var(--accent)">Feito com dados e determinação ✦</span>
+</footer>
+
+<!-- ============ JavaScript ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
